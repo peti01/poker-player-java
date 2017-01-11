@@ -1,15 +1,17 @@
 package org.leanpoker.player;
 
+import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
+import org.leanpoker.player.json.Table;
 
-import java.util.Map;
+public class PlayerBot {
 
-public class Player {
 
     static final String VERSION = "Default Java folding player";
 
     public static int betRequest(JsonElement request) {
-        return 0;
+        Table table = new GsonBuilder().create().fromJson(request, Table.class);
+        return table.getSmall_blind();
     }
 
     public static void showdown(JsonElement game) {
