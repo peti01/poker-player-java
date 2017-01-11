@@ -20,4 +20,31 @@ public class Player {
         this.id = id;
         this.hole_cards = hole_cards;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getStack() {
+        return stack;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public int getBet() {
+        return bet;
+    }
+
+    public String getVersion() {
+        return version;
+    }
+
+    public int getId() {
+        return id;
+    }
+    public List<Card> getHole_cards(){
+        return hole_cards;
+    }
 }
